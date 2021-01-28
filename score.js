@@ -10,10 +10,6 @@ function getData() {
 
 function totalScore() {
     getData()
-    if (listen == null){
-        score.innerHTML("hello")
-        break
-    }
     total = ((listen+speak+write+read)/4)
     total = roundToNearest(total, 0.5)
     score.innerHTML = total
@@ -34,13 +30,6 @@ function roundToNearest(numToRound, numToRoundTo) {
     return Math.round(numToRound * numToRoundTo) / numToRoundTo;
 }
 
-function formValidate(){
-    if (listen == null || read == null || write == null || speak == null)
-    {
-  
-        return false
-    }
-}
 
 
 
